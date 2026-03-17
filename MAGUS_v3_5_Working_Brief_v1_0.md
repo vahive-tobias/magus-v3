@@ -745,22 +745,18 @@ as v3.5 design work proceeds. These are not closed — they are opened.
 
 The v3.0 sealed series only. Seven documents plus the Issues Register.
 Clean, consistent with the Zenodo publication. No v3.5 material at launch.
+All files in root for accessibility.
 
 ```
-/docs/
-  Doc1_Philosophy_v3_2.md
-  Doc2_Architecture_LocalLLM_v3_4_3.md
-  Doc3_Operations_LocalLLM_v3_4_4.md
-  Doc4_Governance_LocalLLM_v3_4_3_2.md
-  Doc5_Guardian_LocalLLM_v3_4_6.md
-  Doc6_Integrity_Auditability_v3_5.md
-  Doc7_OverseerAgent_v3_2.md
-
-/issues-register/
-  MAGUS_Architecture_Issues_Register_v3_0.md
-
-/roadmap/
-  v3_5_Working_Brief.md  ← this document
+Doc1_Philosophy_v3_2.md
+Doc2_Architecture_LocalLLM_v3_4_3.md
+Doc3_Operations_LocalLLM_v3_4_4.md
+Doc4_Governance_LocalLLM_v3_4_3_2.md
+Doc5_Guardian_LocalLLM_v3_4_6.md
+Doc6_Integrity_Auditability_v3_5.md
+Doc7_OverseerAgent_v3_2.md
+MAGUS_Architecture_Issues_Register_v3_0.md
+MAGUS_v3_5_Working_Brief_v1_0.md  ← this document
 ```
 
 ### 9.2 GitHub Issues Pre-populated at Launch
