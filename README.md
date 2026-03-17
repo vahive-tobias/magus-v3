@@ -8,30 +8,21 @@
 
 ## What is MAGUS?
 
-MAGUS is a runtime governance architecture that prevents structural alignment 
-drift in long-running AI agents — the class of failures that emerge after 
-deployment, not at training.
+MAGUS is a runtime governance architecture that prevents structural alignment drift in long-running AI agents — the class of failures that emerge after deployment, not at training.
 
 Three failure modes that current governance frameworks do not prevent:
 
-- **Instruction drift** — the agent's interpretation of its mandate shifts 
-  incrementally across sessions. Each step is locally reasonable. The 
-  cumulative trajectory is not.
+- **Instruction drift** — the agent's interpretation of its mandate shifts incrementally across sessions. Each step is locally reasonable. The cumulative trajectory is not.
 
-- **Autonomy accumulation** — the agent acquires operational latitude through 
-  repeated decisions that individually appear authorised but collectively 
-  represent unsanctioned scope expansion.
+- **Autonomy accumulation** — the agent acquires operational latitude through repeated decisions that individually appear authorised but collectively represent unsanctioned scope expansion.
 
-- **Authority laundering** — instructions acquire apparent legitimacy through 
-  the agent's own prior actions rather than through verifiable human 
-  authorisation. The agent authorises itself.
+- **Authority laundering** — instructions acquire apparent legitimacy through the agent's own prior actions rather than through verifiable human authorisation. The agent authorises itself.
 
 ---
 
 ## Architecture
 
-MAGUS addresses these failure modes through three components operating as a 
-unified system:
+MAGUS addresses these failure modes through three components operating as a unified system:
 
 | Component | Role |
 |---|---|
@@ -39,9 +30,44 @@ unified system:
 | **Guardian** — Execution Governance Layer | Evaluates every proposed action against nine formal invariants before execution. Dual human-authority sign-off for state-altering proposals |
 | **RT** — Reconciliation Thread | Constitutive governance record — makes the agent's drift trajectory continuously legible to operators in real time |
 
-Nine formal, falsifiable invariants. They either hold at every execution 
-point or trigger a governed shutdown. Verifiably constrained or halted — 
-not just hopefully aligned.
+Nine formal, falsifiable invariants. They either hold at every execution point or trigger a governed shutdown. Verifiably constrained or halted — not just hopefully aligned.
+
+---
+
+## Repository Structure
+
+```
+/docs/
+  Doc1_Philosophy_v3_2.md
+  Doc2_Architecture_LocalLLM_v3_4_3.md
+  Doc3_Operations_LocalLLM_v3_4_4.md
+  Doc4_Governance_LocalLLM_v3_4_3_2.md
+  Doc5_Guardian_LocalLLM_v3_4_6.md
+  Doc6_Integrity_Auditability_v3_5.md
+  Doc7_OverseerAgent_v3_2.md
+
+/issues-register/
+  MAGUS_Architecture_Issues_Register_v3_0.md
+
+/roadmap/
+  MAGUS_v3_5_Working_Brief_v3_0.md
+```
+
+**Start with Doc 1.** It requires no technical background and is the conceptual foundation for everything that follows. Each subsequent document is self-contained but designed to be read in sequence.
+
+---
+
+## Document Summary
+
+| Doc | Title | What it covers |
+|---|---|---|
+| 1 | Philosophy | The 12 principles and 9 architectural invariants. Why MAGUS exists and what it commits to. No code. |
+| 2 | Architecture Specification | Cognitive architecture, process isolation, MAGUS Recovery Domain, State Journal, Global State Transition Matrix, boot chain. |
+| 3 | Operational Specification | Deployment lifecycle, calibration pipeline, WBRP cycle, session management, crash recovery. |
+| 4 | Governance Guide | Nine health signals, dual-axis diagnostics, operator responsibilities, benchmark methodology. |
+| 5 | Guardian: Execution Governance | Full DEL specification, Guardian architecture, hybrid escalation model, HMAC proposal signing, GSTH integration. |
+| 6 | Integrity and Auditability | RT hash-chain, complete entry taxonomy, genesis schema, key management, 17-property Formal Invariant Set. |
+| 7 | Overseer Agent Specification | Governance Health Monitor, Cross-Instance Coherence Protocol, Trust Trajectory Model, Current Deployment Taxonomy. |
 
 ---
 
@@ -49,11 +75,12 @@ not just hopefully aligned.
 
 | Item | Status |
 |---|---|
-| v3.0 Local LLM pathway specification | ✅ Published — Zenodo |
-| v3.0 Agent/API pathway specification | ✅ Sealed — publication forthcoming |
-| v3.5 development | ⏳ Active — closing remaining open problems |
+| v3.0 Local LLM pathway specification | ✅ Published — Zenodo + this repository |
+| v3.0 Issues Register | ✅ Published — this repository |
+| v3.5 development | ⏳ Active — addressing Category 3 open problems |
+| Second deployment pathway | ⏳ In preparation — publication forthcoming |
 | Reference implementation | 🔲 Pending hardware — see below |
-| GSTH test suite | 🔲 Pending implementation |
+| GSTH test suite execution | 🔲 Pending implementation |
 
 ---
 
@@ -66,44 +93,57 @@ The v3.0 specification is published as a seven-document sealed series:
 The specification includes:
 - Nine formal architectural invariants
 - Complete GSTH (Governance and Stability Test Harness) specification
-- Category 3/4 open-problems register
-- Formal elevation cycle tracker (46 entries, all resolved)
+- Formal Issues Register with honest Category 3/4 open-problems register
+- 17-property Formal Invariant Set (FIS-1 through FIS-17)
 
-A second deployment pathway for API-hosted agent systems (GPT-4o, Claude, 
-Gemini and equivalents) is in final documentation.
+---
+
+## Open Problems
+
+The Issues Register (`/issues-register/`) documents every architectural issue identified during v3.0 development — including two Category 3 open hard problems with no complete solution in v3.0:
+
+- **OA-C3-01** — Dynamic λ calibration: no single static λ value may satisfy all boundary conditions across all deployment task profiles. Awaiting PG-01 empirical data.
+- **OA-C3-02** — Behavioural observation as operator intent proxy: the Governance Health Monitor cannot detect intent-consistent deception by a patient adversary operating within all monitored thresholds.
+
+We publish these openly because falsifiable identification of unsolved problems is more valuable than a specification that claims completeness it does not have. v3.5 development is actively investigating both.
 
 ---
 
 ## Why This Repository Exists
 
-The gap between our complete specification and a working reference 
-implementation is hardware. This repository will become the home of that 
-implementation when funding is secured.
+The gap between our complete specification and a working reference implementation is hardware. This repository is the specification home. The reference implementation will live here when hardware funding is secured.
 
 If you want to support that work:
 👉 [Manifund project](https://manifund.org/projects/magus-v30)
 
 ---
 
-## Two Deployment Pathways
+## Roadmap
 
-**Local LLM pathway** — governance for locally-hosted inference environments.
-High-liability deployment contexts: healthcare infrastructure, defence 
-applications, regulated industry.
+The `/roadmap/` folder contains the MAGUS v3.5 Working Brief — the internal design document tracking active development against the open problems identified in v3.0. It is published here for transparency, not as a specification. Nothing in the Working Brief supersedes a sealed v3.0 document.
 
-**Agent/API pathway** — governance for agent systems built on cloud-hosted 
-models. Addresses the commercial AI startup ecosystem building on GPT-4o, 
-Claude, Gemini and equivalents.
+v3.5 targets:
+- Governed RSI closed-loop architecture
+- Operator telemetry governance
+- Hardware-level memory obliteration protocol
+- A second deployment pathway for API-hosted model deployments
 
-Both pathways share the same nine invariants and three-component architecture. 
-Both are fully specified. Both will be implemented.
+---
+
+## Related Tools
+
+Practical governance tooling implementing the surface layer of MAGUS patterns:
+
+- **[DSMC Minimal](https://github.com/vahive-tobias/dsmc-magus-public)** — lightweight, zero-dependency Python governance layer for OpenClaw agents. Free and open source.
+- **[DSMC Agent Engine v2.0](https://puititiya.gumroad.com/l/dsmc-agent-engine)** — production governance stack with HITL intercept, zero-trust execution boundary, and live drift monitoring. $49.
 
 ---
 
 ## Contact
 
-**Email:** support@aivare.ai
-**Website:** https://aivare.ai
-**Zenodo:** https://doi.org/10.5281/zenodo.19013833
+**Email:** support@aivare.ai  
+**Website:** [aivare.ai](https://aivare.ai)  
+**Zenodo:** [DOI: 10.5281/zenodo.19013833](https://doi.org/10.5281/zenodo.19013833)  
+**Fund the implementation:** [manifund.org/projects/magus-v30](https://manifund.org/projects/magus-v30)
 
 VaHive Systems Lab | Chiang Mai, Thailand | March 2026
