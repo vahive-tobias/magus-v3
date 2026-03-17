@@ -43,7 +43,7 @@ All files are in the root for easy access:
 | `Doc1_Philosophy_v3_2.md` | 12 principles and 9 architectural invariants |
 | `Doc2_Architecture_LocalLLM_v3_4_3.md` | Cognitive architecture, process isolation, recovery domain |
 | `Doc3_Operations_LocalLLM_v3_4_4.md` | Deployment lifecycle, WBRP cycle, session management |
-| `Doc4_Governance_LocalLLM_v3_4_3_2.md` | Nine health signals, diagnostics, operator responsibilities |
+| `Doc4_Governance_LocalLLM_v3_4_3.md` | Nine health signals, diagnostics, operator responsibilities |
 | `Doc5_Guardian_LocalLLM_v3_4_6.md` | DEL specification, Guardian architecture, GSTH integration |
 | `Doc6_Integrity_Auditability_v3_5.md` | RT hash-chain, entry taxonomy, 17-property Formal Invariant Set |
 | `Doc7_OverseerAgent_v3_2.md` | Governance Health Monitor, Trust Trajectory, Current Deployment Taxonomy |
@@ -97,7 +97,7 @@ The specification includes:
 
 ## Open Problems
 
-The Issues Register (`/issues-register/`) documents every architectural issue identified during v3.0 development — including two Category 3 open hard problems with no complete solution in v3.0:
+The Issues Register (`MAGUS_Architecture_Issues_Register_v3_0.md`) documents every architectural issue identified during v3.0 development — including two Category 3 open hard problems with no complete solution in v3.0:
 
 - **OA-C3-01** — Dynamic λ calibration: no single static λ value may satisfy all boundary conditions across all deployment task profiles. Awaiting PG-01 empirical data.
 - **OA-C3-02** — Behavioural observation as operator intent proxy: the Governance Health Monitor cannot detect intent-consistent deception by a patient adversary operating within all monitored thresholds.
@@ -117,7 +117,7 @@ If you want to support that work:
 
 ## Roadmap
 
-The `/roadmap/` folder contains the MAGUS v3.5 Working Brief — the internal design document tracking active development against the open problems identified in v3.0. It is published here for transparency, not as a specification. Nothing in the Working Brief supersedes a sealed v3.0 document.
+The `MAGUS_v3_5_Working_Brief_v1_0.md` file contains the MAGUS v3.5 Working Brief — the internal design document tracking active development against the open problems identified in v3.0. It is published here for transparency, not as a specification. Nothing in the Working Brief supersedes a sealed v3.0 document.
 
 v3.5 targets:
 - Governed RSI closed-loop architecture
