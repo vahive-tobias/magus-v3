@@ -34,26 +34,23 @@ Nine formal, falsifiable invariants. They either hold at every execution point o
 
 ---
 
-## Repository Structure
+## Repository Contents
 
-```
-/docs/
-  Doc1_Philosophy_v3_2.md
-  Doc2_Architecture_LocalLLM_v3_4_3.md
-  Doc3_Operations_LocalLLM_v3_4_4.md
-  Doc4_Governance_LocalLLM_v3_4_3_2.md
-  Doc5_Guardian_LocalLLM_v3_4_6.md
-  Doc6_Integrity_Auditability_v3_5.md
-  Doc7_OverseerAgent_v3_2.md
+All files are in the root for easy access:
 
-/issues-register/
-  MAGUS_Architecture_Issues_Register_v3_0.md
+| File | Contents |
+|---|---|
+| `Doc1_Philosophy_v3_2.md` | 12 principles and 9 architectural invariants |
+| `Doc2_Architecture_LocalLLM_v3_4_3.md` | Cognitive architecture, process isolation, recovery domain |
+| `Doc3_Operations_LocalLLM_v3_4_4.md` | Deployment lifecycle, WBRP cycle, session management |
+| `Doc4_Governance_LocalLLM_v3_4_3_2.md` | Nine health signals, diagnostics, operator responsibilities |
+| `Doc5_Guardian_LocalLLM_v3_4_6.md` | DEL specification, Guardian architecture, GSTH integration |
+| `Doc6_Integrity_Auditability_v3_5.md` | RT hash-chain, entry taxonomy, 17-property Formal Invariant Set |
+| `Doc7_OverseerAgent_v3_2.md` | Governance Health Monitor, Trust Trajectory, Current Deployment Taxonomy |
+| `MAGUS_Architecture_Issues_Register_v3_0.md` | Formal issues register — all resolved items and open problems |
+| `MAGUS_v3_5_Working_Brief_v1_0.md` | v3.5 development roadmap — work areas and open issues |
 
-/roadmap/
-  MAGUS_v3_5_Working_Brief_v3_0.md
-```
-
-**Start with Doc 1.** It requires no technical background and is the conceptual foundation for everything that follows. Each subsequent document is self-contained but designed to be read in sequence.
+**Start with Doc 1.** It requires no technical background and is the conceptual foundation for everything that follows.
 
 ---
 
