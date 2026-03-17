@@ -34,6 +34,12 @@ Nine formal, falsifiable invariants. They either hold at every execution point o
 
 ---
 
+## Architecture Diagram
+
+![MAGUS Architecture](architecture.svg)
+
+---
+
 ## Repository Contents
 
 All files are in the root for easy access:
