@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Worker / Agent -->
+  <rect x="255" y="20" width="170" height="52" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+  <text x="340" y="43" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Worker / Agent</text>
+  <text x="340" y="61" text-anchor="middle" font-size="11" fill="#5F5E5A">untrusted — proposals only</text>
+
+  <!-- Arrow Worker to Guardian -->
+  <line x1="340" y1="72" x2="340" y2="138" stroke="#888780" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <text x="350" y="110" font-size="11" fill="#888780">proposes</text>
+
+  <!-- Guardian -->
+  <rect x="208" y="140" width="264" height="62" rx="8" fill="#1B3A6B" stroke="#0F2547" stroke-width="1.5"/>
+  <text x="340" y="164" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Guardian</text>
+  <text x="340" y="183" text-anchor="middle" font-size="11" fill="#B5D4F4">9 invariants · dual-authority approval</text>
+
+  <!-- Arrow Guardian to DEL -->
+  <path d="M208,171 L120,171 L120,278" stroke="#1B6B6B" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <text x="46" y="224" font-size="11" fill="#1B6B6B">records</text>
+
+  <!-- Arrow Guardian to RT -->
+  <path d="M472,171 L560,171 L560,278" stroke="#534AB7" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <text x="488" y="224" font-size="11" fill="#534AB7">entries</text>
+
+  <!-- DEL -->
+  <rect x="30" y="280" width="180" height="62" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="120" y="305" text-anchor="middle" font-size="14" font-weight="600" fill="#04342C">DEL</text>
+  <text x="120" y="323" text-anchor="middle" font-size="11" fill="#085041">append-only · hash-chained</text>
+
+  <!-- RT -->
+  <rect x="470" y="280" width="180" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="560" y="305" text-anchor="middle" font-size="14" font-weight="600" fill="#26215C">RT</text>
+  <text x="560" y="323" text-anchor="middle" font-size="11" fill="#3C3489">constitutive · operator-legible</text>
+
+  <!-- Arrow DEL to Operator -->
+  <path d="M120,342 L120,408 L228,424" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Arrow RT to Operator -->
+  <path d="M560,342 L560,408 L452,424" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <text x="494" y="404" font-size="11" fill="#BA7517">legible record</text>
+
+  <!-- Operator -->
+  <rect x="220" y="400" width="240" height="56" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5"/>
+  <text x="340" y="424" text-anchor="middle" font-size="14" font-weight="600" fill="#412402">Operator</text>
+  <text x="340" y="444" text-anchor="middle" font-size="11" fill="#854F0B">human authority · terminal</text>
+
+  <!-- Authority arrow (dashed) Operator to Guardian -->
+  <path d="M460,418 Q600,340 472,210 Q465,183 472,171" stroke="#BA7517" stroke-width="1" stroke-dasharray="5,3" fill="none" marker-end="url(#arr)"/>
+  <text x="546" y="316" font-size="11" fill="#BA7517">authority</text>
+
+  <!-- Legend -->
+  <text x="30" y="468" font-size="10" fill="#888780">DEL = Dynamic Epistemic Ledger  ·  RT = Reconciliation Thread  ·  Dashed = authority chain</text>
+</svg>
