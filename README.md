@@ -129,7 +129,7 @@ v3.5 targets:
 - Governed RSI closed-loop architecture
 - Operator telemetry governance
 - Hardware-level memory obliteration protocol
-- A second deployment pathway for API-hosted model deployments
+- A second deployment pathway
 
 ---
 
